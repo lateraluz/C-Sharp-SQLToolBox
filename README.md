@@ -1,8 +1,10 @@
 # SQLToolBox
 
-1. Create CRUD Stored Procedures
+SQLToolBox is a tool created in C# in order to:
+
+1. Create CRUD (Create, Read, Update, Delete) SQLServer Stored Procedures. 
 2. C# Entities.  
-3. C# create SQLCommand for CRUD with sql statements.
+3. C# generates SQLCommand for CRUD with sql statements.
 
 
 ![1](https://user-images.githubusercontent.com/43474323/64068442-5da48580-cbf5-11e9-86fa-afcc998273f2.JPG)
