@@ -1,10 +1,8 @@
 # SQLToolBox
 
-#Connect to SQLServer
-#1- Create CRUD Stored Procedures
-#2- C# Entities. 
-#3- C# create SQLCommand for CRUD with sql statements.
-
+1. Create CRUD Stored Procedures
+2. C# Entities.  
+3. C# create SQLCommand for CRUD with sql statements.
 
 
 ![1](https://user-images.githubusercontent.com/43474323/64068442-5da48580-cbf5-11e9-86fa-afcc998273f2.JPG)
