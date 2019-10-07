@@ -38,7 +38,7 @@ If you want to executing just click on appSQLToolBox.exe
 
 ## License
 Feel free to improve it!
-https://github.com/lateraluz/SQLToolBox/blob/master/LICENSE
+
 <BR>
   <BR>
 **knowledge belongs to humanity**, *Pascal*
