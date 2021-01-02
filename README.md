@@ -8,8 +8,8 @@ SQLToolBox is a tool created in C# in order to:
 3. C# generates SQLCommand for CRUD with sql statements.
 
 ## Prerequisites
-1. Visual Studio >= 2015
-2. Framework 4.0
+1. Visual Studio >= 2019
+2. Framework 4.7
 3. SqlServer 200X.
 
 If you want to executing just click on appSQLToolBox.exe
