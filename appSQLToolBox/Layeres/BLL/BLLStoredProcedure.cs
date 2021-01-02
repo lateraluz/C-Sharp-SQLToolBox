@@ -80,7 +80,7 @@ namespace UTN.Winform.SQLToolBox.Layeres.BLL
             else
             {
 
-                insert.AppendFormat("No se puede crear el Stored Procedure para Borrar porque la Tabla {0} NO  LLAVES PRIMARIAS", pTable.TableName);
+                insert.AppendFormat("WARNING: No se puede crear el Stored Procedure para Borrar porque la Tabla {0} NO  LLAVES PRIMARIAS", pTable.TableName);
             }
 
             return insert.ToString();
@@ -101,7 +101,7 @@ namespace UTN.Winform.SQLToolBox.Layeres.BLL
                 mensaje = "";
                 if (GetSetUpdateFields(pTable, ref mensaje) == "")
                 {
-                    return "-- ALERTA a GENERAR EL Stored Procedured UPDATE  " + Environment.NewLine + "--" + mensaje + Environment.NewLine + Environment.NewLine;
+                    return "-- WARNING al GENERAR EL Stored Procedured UPDATE  " + Environment.NewLine + "--" + mensaje + Environment.NewLine + Environment.NewLine;
                 }
 
                 update.AppendFormat("IF OBJECT_ID(\'usp_UPDATE_{0}\') is NOT NULL {1}", pTable, Environment.NewLine);
@@ -121,7 +121,7 @@ namespace UTN.Winform.SQLToolBox.Layeres.BLL
             else
             {
 
-                update.AppendFormat("No se puede crear el Stored Procedure para Actualizar porque la Tabla {0} NO  LLAVES PRIMARIAS", pTable.TableName);
+                update.AppendFormat("WARNING:No se puede crear el Stored Procedure para Actualizar porque la Tabla {0} NO  LLAVES PRIMARIAS", pTable.TableName);
             }
 
             return update.ToString();
@@ -153,7 +153,7 @@ namespace UTN.Winform.SQLToolBox.Layeres.BLL
             }
             else
             {
-                insert.AppendFormat("No se puede crear el Stored Procedure para seleccionar  porque la Tabla {0} NO  LLAVES PRIMARIAS", pTable.TableName);
+                insert.AppendFormat("WARNING:No se puede crear el Stored Procedure para seleccionar  porque la Tabla {0} NO  LLAVES PRIMARIAS", pTable.TableName);
             }
 
             return insert.ToString();
@@ -183,7 +183,7 @@ namespace UTN.Winform.SQLToolBox.Layeres.BLL
             else
             {
 
-                insert.AppendFormat("No se puede crear el Stored Procedure para seleccionar datos por llave Primaria porque la Tabla {0} NO  LLAVES PRIMARIAS \n", pTable.TableName);
+                insert.AppendFormat("WARNING:No se puede crear el Stored Procedure para seleccionar datos por llave Primaria porque la Tabla {0} NO  LLAVES PRIMARIAS \n", pTable.TableName);
             }
 
             return insert.ToString();
@@ -244,7 +244,7 @@ namespace UTN.Winform.SQLToolBox.Layeres.BLL
             }
 
             if (parameters.ToString().Trim().Length == 0)
-                return "No tiene llaves privarias para efectuar el filtro, agreguelas y vuelva a generar los Stored Procedures \n";
+                return "WARNING: No tiene llaves privarias para efectuar el filtro, agreguelas y vuelva a generar los Stored Procedures \n";
             else
                 //Eliminar la ultima (,)
                 return parameters.ToString().Substring(0, parameters.Length - 1);

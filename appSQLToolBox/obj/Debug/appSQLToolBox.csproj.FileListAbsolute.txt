@@ -1,0 +1,87 @@
+C:\Users\Morera\Documents\Visual Studio 2015\Projects\UTN_VS\appSQLToolBox\appSQLToolBox\bin\Debug\appSQLToolBox.exe.config
+C:\Users\Morera\Documents\Visual Studio 2015\Projects\UTN_VS\appSQLToolBox\appSQLToolBox\bin\Debug\appSQLToolBox.exe
+C:\Users\Morera\Documents\Visual Studio 2015\Projects\UTN_VS\appSQLToolBox\appSQLToolBox\bin\Debug\appSQLToolBox.pdb
+C:\Users\Morera\Documents\Visual Studio 2015\Projects\UTN_VS\appSQLToolBox\appSQLToolBox\obj\Debug\appSQLToolBox.csprojResolveAssemblyReference.cache
+C:\Users\Morera\Documents\Visual Studio 2015\Projects\UTN_VS\appSQLToolBox\appSQLToolBox\obj\Debug\appSQLToolBox.csproj.GenerateResource.Cache
+C:\Users\Morera\Documents\Visual Studio 2015\Projects\UTN_VS\appSQLToolBox\appSQLToolBox\obj\Debug\appSQLToolBox.exe
+C:\Users\Morera\Documents\Visual Studio 2015\Projects\UTN_VS\appSQLToolBox\appSQLToolBox\obj\Debug\appSQLToolBox.pdb
+C:\Users\Morera\Documents\Visual Studio 2015\Projects\UTN_VS\appSQLToolBox\appSQLToolBox\obj\Debug\UTN.Winform.SQLToolBox.Layeres.UI.frmMain.resources
+C:\Users\Morera\Documents\Visual Studio 2015\Projects\UTN_VS\appSQLToolBox\appSQLToolBox\obj\Debug\UTN.Winform.SQLToolBox.Properties.Resources.resources
+C:\Users\Morera\Documents\Visual Studio 2015\Projects\UTN_VS\appSQLToolBox\appSQLToolBox\bin\Debug\log4net.dll
+C:\Users\Morera\Documents\Visual Studio 2015\Projects\UTN_VS\appSQLToolBox\appSQLToolBox\bin\Debug\log4net.xml
+C:\Users\Morera\Documents\Visual Studio 2015\Projects\UTN_VS\appSQLToolBox\appSQLToolBox\obj\Debug\UTN.Winform.SQLToolBox.Layeres.UI.frmLogin.resources
+C:\Users\Morera\Documents\Visual Studio 2015\Projects\UTN_VS\appSQLToolBox\appSQLToolBox\obj\Debug\UTN.Winform.SQLToolBox.Layeres.UI.frmAcercade.resources
+C:\Users\Morera\Desktop\SQLToolBox-master\appSQLToolBox\obj\Debug\UTN.Winform.SQLToolBox.Layeres.UI.frmAcercade.resources
+C:\Users\Morera\Desktop\SQLToolBox-master\appSQLToolBox\obj\Debug\UTN.Winform.SQLToolBox.Layeres.UI.frmLogin.resources
+C:\Users\Morera\Desktop\SQLToolBox-master\appSQLToolBox\obj\Debug\UTN.Winform.SQLToolBox.Layeres.UI.frmMain.resources
+C:\Users\Morera\Desktop\SQLToolBox-master\appSQLToolBox\obj\Debug\UTN.Winform.SQLToolBox.Properties.Resources.resources
+C:\Users\Morera\Desktop\SQLToolBox-master\appSQLToolBox\obj\Debug\appSQLToolBox.csproj.GenerateResource.cache
+C:\Users\Morera\Desktop\SQLToolBox-master\appSQLToolBox\obj\Debug\appSQLToolBox.csproj.CoreCompileInputs.cache
+C:\Users\Morera\Desktop\SQLToolBox-master\appSQLToolBox\bin\Debug\appSQLToolBox.exe.config
+C:\Users\Morera\Desktop\SQLToolBox-master\appSQLToolBox\bin\Debug\appSQLToolBox.exe
+C:\Users\Morera\Desktop\SQLToolBox-master\appSQLToolBox\bin\Debug\appSQLToolBox.pdb
+C:\Users\Morera\Desktop\SQLToolBox-master\appSQLToolBox\bin\Debug\log4net.dll
+C:\Users\Morera\Desktop\SQLToolBox-master\appSQLToolBox\bin\Debug\log4net.xml
+C:\Users\Morera\Desktop\SQLToolBox-master\appSQLToolBox\obj\Debug\appSQLToolBox.csproj.CopyComplete
+C:\Users\Morera\Desktop\SQLToolBox-master\appSQLToolBox\obj\Debug\appSQLToolBox.exe
+C:\Users\Morera\Desktop\SQLToolBox-master\appSQLToolBox\obj\Debug\appSQLToolBox.pdb
+C:\Users\Morera\Documents\Visual Studio 2015\Projects\UTN_VS\appSQLToolBox\appSQLToolBox\appSQLToolBox\bin\Debug\appSQLToolBox.exe.config
+C:\Users\Morera\Documents\Visual Studio 2015\Projects\UTN_VS\appSQLToolBox\appSQLToolBox\appSQLToolBox\bin\Debug\appSQLToolBox.exe
+C:\Users\Morera\Documents\Visual Studio 2015\Projects\UTN_VS\appSQLToolBox\appSQLToolBox\appSQLToolBox\bin\Debug\appSQLToolBox.pdb
+C:\Users\Morera\Documents\Visual Studio 2015\Projects\UTN_VS\appSQLToolBox\appSQLToolBox\appSQLToolBox\bin\Debug\log4net.dll
+C:\Users\Morera\Documents\Visual Studio 2015\Projects\UTN_VS\appSQLToolBox\appSQLToolBox\appSQLToolBox\bin\Debug\log4net.xml
+C:\Users\Morera\Documents\Visual Studio 2015\Projects\UTN_VS\appSQLToolBox\appSQLToolBox\appSQLToolBox\obj\Debug\appSQLToolBox.csprojAssemblyReference.cache
+C:\Users\Morera\Documents\Visual Studio 2015\Projects\UTN_VS\appSQLToolBox\appSQLToolBox\appSQLToolBox\obj\Debug\UTN.Winform.SQLToolBox.Layeres.UI.frmAcercade.resources
+C:\Users\Morera\Documents\Visual Studio 2015\Projects\UTN_VS\appSQLToolBox\appSQLToolBox\appSQLToolBox\obj\Debug\UTN.Winform.SQLToolBox.Layeres.UI.frmLogin.resources
+C:\Users\Morera\Documents\Visual Studio 2015\Projects\UTN_VS\appSQLToolBox\appSQLToolBox\appSQLToolBox\obj\Debug\UTN.Winform.SQLToolBox.Layeres.UI.frmMain.resources
+C:\Users\Morera\Documents\Visual Studio 2015\Projects\UTN_VS\appSQLToolBox\appSQLToolBox\appSQLToolBox\obj\Debug\UTN.Winform.SQLToolBox.Properties.Resources.resources
+C:\Users\Morera\Documents\Visual Studio 2015\Projects\UTN_VS\appSQLToolBox\appSQLToolBox\appSQLToolBox\obj\Debug\appSQLToolBox.csproj.GenerateResource.cache
+C:\Users\Morera\Documents\Visual Studio 2015\Projects\UTN_VS\appSQLToolBox\appSQLToolBox\appSQLToolBox\obj\Debug\appSQLToolBox.csproj.CoreCompileInputs.cache
+C:\Users\Morera\Documents\Visual Studio 2015\Projects\UTN_VS\appSQLToolBox\appSQLToolBox\appSQLToolBox\obj\Debug\appSQLToolBox.csproj.CopyComplete
+C:\Users\Morera\Documents\Visual Studio 2015\Projects\UTN_VS\appSQLToolBox\appSQLToolBox\appSQLToolBox\obj\Debug\appSQLToolBox.exe
+C:\Users\Morera\Documents\Visual Studio 2015\Projects\UTN_VS\appSQLToolBox\appSQLToolBox\appSQLToolBox\obj\Debug\appSQLToolBox.pdb
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\appSQLToolBox.exe.config
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\appSQLToolBox.exe
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\appSQLToolBox.pdb
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\Microsoft.Data.SqlClient.dll
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\Microsoft.Identity.Client.dll
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\Microsoft.IdentityModel.Logging.dll
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\Microsoft.IdentityModel.Protocols.dll
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\Microsoft.SqlServer.Management.SqlParser.dll
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\Newtonsoft.Json.dll
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\Microsoft.Data.SqlClient.pdb
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\Microsoft.Data.SqlClient.xml
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\Microsoft.Identity.Client.xml
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\Microsoft.IdentityModel.Logging.xml
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\Microsoft.IdentityModel.Protocols.xml
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\Microsoft.SqlServer.Management.SqlParser.pdb
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\Microsoft.SqlServer.Management.SqlParser.xml
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\Newtonsoft.Json.xml
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\de\Microsoft.Data.SqlClient.resources.dll
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\es\Microsoft.Data.SqlClient.resources.dll
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\fr\Microsoft.Data.SqlClient.resources.dll
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\it\Microsoft.Data.SqlClient.resources.dll
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\ja\Microsoft.Data.SqlClient.resources.dll
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\ko\Microsoft.Data.SqlClient.resources.dll
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\pt-BR\Microsoft.Data.SqlClient.resources.dll
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\obj\Debug\UTN.Winform.SQLToolBox.Layeres.UI.frmAcercade.resources
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\obj\Debug\UTN.Winform.SQLToolBox.Layeres.UI.frmLogin.resources
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\obj\Debug\UTN.Winform.SQLToolBox.Layeres.UI.frmMain.resources
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\obj\Debug\UTN.Winform.SQLToolBox.Properties.Resources.resources
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\obj\Debug\appSQLToolBox.csproj.GenerateResource.cache
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\obj\Debug\appSQLToolBox.csproj.CoreCompileInputs.cache
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\obj\Debug\appSQLToolBox.csproj.CopyComplete
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\obj\Debug\appSQLToolBox.exe
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\obj\Debug\appSQLToolBox.pdb
+D:\Documents\Visual Studio 2019\Projects\ISW411\appSQLToolBox\obj\Debug\appSQLToolBox.csprojAssemblyReference.cache

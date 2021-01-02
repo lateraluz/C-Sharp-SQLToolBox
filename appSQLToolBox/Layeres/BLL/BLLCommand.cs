@@ -14,29 +14,29 @@ namespace UTN.Winform.SQLToolBox.Layeres.BLL
         public string CrearCommand(string pBaseDatos, string pTabla)
         {
             StringBuilder command = new StringBuilder();
-            StringBuilder fingerprint = new StringBuilder();
-            fingerprint.AppendFormat("// Generado por {0} {1}", System.Windows.Forms.Application.ProductName, Environment.NewLine);
-            fingerprint.AppendFormat("// Version: {0} {1} ", System.Windows.Forms.Application.ProductVersion, Environment.NewLine);
-            fingerprint.AppendFormat("// Fecha: {0} {1} ", DateTime.Now, Environment.NewLine);
+            StringBuilder signature = new StringBuilder();
+            signature.AppendFormat("// Generado por {0} {1}", System.Windows.Forms.Application.ProductName, Environment.NewLine);
+            signature.AppendFormat("// Version: {0} {1} ", System.Windows.Forms.Application.ProductVersion, Environment.NewLine);
+            signature.AppendFormat("// Fecha: {0} {1} ", DateTime.Now, Environment.NewLine);
 
             command.Append("// Insert Command \n");
-            command.AppendFormat(fingerprint.ToString());
+            command.AppendFormat(signature.ToString());
             command.Append(CommandInsert(pBaseDatos, pTabla));
             command.Append(Environment.NewLine);
             command.Append("// Update Command \n");
-            command.AppendFormat(fingerprint.ToString());
+            command.AppendFormat(signature.ToString());
             command.Append(CommandUpdate(pBaseDatos, pTabla));
             command.Append(Environment.NewLine);
             command.Append("// Delete Command \n");
-            command.AppendFormat(fingerprint.ToString());
+            command.AppendFormat(signature.ToString());
             command.Append(CommandDelete(pBaseDatos, pTabla));
             command.Append(Environment.NewLine);
             command.Append("// Select By Id Command \n");
-            command.AppendFormat(fingerprint.ToString());
+            command.AppendFormat(signature.ToString());
             command.Append(SelectById(pBaseDatos, pTabla));
             command.Append(Environment.NewLine);
             command.Append("// Select ALL  Command \n");
-            command.AppendFormat(fingerprint.ToString());
+            command.AppendFormat(signature.ToString());
             command.Append(SelectAll(pBaseDatos, pTabla));
 
             return command.ToString();
@@ -90,26 +90,30 @@ namespace UTN.Winform.SQLToolBox.Layeres.BLL
 
             // No primary Key so It can't create Update sentence
             if (oTabla.PrimaryKeyList.Count == 0)
-                return $"//  La tabla  no tiene Llave Primaria, NO SE puede crear un UPDATE porque se requiere en el WHERE \n\n";
+                return $"//WARNING:  La tabla  no tiene Llave Primaria, NO SE puede crear un UPDATE porque se requiere en el WHERE \n\n";
 
             if (oTabla.PrimaryKeyList.Count == oTabla.ColumnList.Count)
-                return $"// La tabla '{oTabla.TableName.ToUpper()}' tiene todas sus Columnas como llaves primarias, NO se puede crear UPDATE  \n\n";
+                return $"//WARNING: La tabla '{oTabla.TableName.ToUpper()}' tiene todas sus Columnas como llaves primarias, NO se puede crear UPDATE  \n\n";
 
             // Insert 
             sql.AppendFormat("Update  {0} SET ", pTabla);
             foreach (var oColumna in oTabla.ColumnList)
             {
                 // no identity
-                if (oColumna.Identity != true)
-                    // no update primary key.
-                    if (oTabla.PrimaryKeyList.Find(p => p.Name.Equals(oColumna.Name, StringComparison.CurrentCultureIgnoreCase)) != null)
-                        sql.AppendFormat(@"{0} = " + "@" + "{0} ,", oColumna.Name);
+                if (oColumna.Identity == true)
+                    continue;
+                // no update primary key.
+                if (oTabla.PrimaryKeyList.Find(p => p.Name.Equals(oColumna.Name, StringComparison.CurrentCultureIgnoreCase)) != null)
+                    continue;
+
+                sql.AppendFormat("\t{0} =  @{1}  ,\n", oColumna.Name, oColumna.Name);
+
             }
 
             // Eliminar ultima (,)
             sql.Remove(sql.Length - 2, 2);
 
-            sql.Append("  Where ");
+            sql.Append("\n  Where ");
             // llaves primarias 
             foreach (var oColumna in oTabla.PrimaryKeyList)
             {
@@ -139,7 +143,7 @@ namespace UTN.Winform.SQLToolBox.Layeres.BLL
             Table oTabla = _DALTable.GetTableStructure(pBaseDatos, pTabla);
 
             if (oTabla.PrimaryKeyList.Count == 0)
-                return $"// La tabla '{oTabla.TableName.ToUpper()}' NO tiene Llave Primaria, no se puede crear un Delete \n\n";
+                return $"//WARNING: La tabla '{oTabla.TableName.ToUpper()}' NO tiene Llave Primaria, no se puede crear un Delete \n\n";
 
             // Insert 
             sql.AppendFormat("Delete from  {0} ", pTabla);
@@ -172,7 +176,7 @@ namespace UTN.Winform.SQLToolBox.Layeres.BLL
             Table oTabla = _DALTable.GetTableStructure(pBaseDatos, pTabla);
 
             if (oTabla.PrimaryKeyList.Count == 0)
-                return $"// La tabla '{oTabla.TableName.ToUpper()}' NO tiene Llave Primaria, no se puede crear un Select_By_Id \n\n";
+                return $"//WARNING: La tabla '{oTabla.TableName.ToUpper()}' NO tiene Llave Primaria, no se puede crear un Select_By_Id \n\n";
 
             // Select 
             sql.AppendFormat("Select  ");
@@ -242,14 +246,14 @@ namespace UTN.Winform.SQLToolBox.Layeres.BLL
             command.AppendFormat("// \n");
             command.AppendFormat("{0} o{0} = new {0}();\n", pTabla.TableName);
             command.AppendFormat("foreach (DataRow dr in ds.Tables[0].Rows) {0} {1}  \n ", Environment.NewLine, "{");
-            
+
             foreach (var oColumna in pTabla.ColumnList)
             {
                 // command.AppendFormat("\t{0}.{1} = item[\"{1}\"];\n", "o" + oTabla.TableName,oColumna.Name);
                 command.AppendFormat("\t{0}.{1} ={2};\n", "o" + pTabla.TableName, oColumna.Name, _BLLClr.SQLTypeToCLR(oColumna.Type, oColumna.Name));
             }
 
-           // command.AppendFormat("\tlista.Add({0});\n", "o" + pTabla.TableName);
+            // command.AppendFormat("\tlista.Add({0});\n", "o" + pTabla.TableName);
             command.AppendFormat("\r{0}\n", "}");
             command.AppendFormat("return o{0};\n", pTabla.TableName);
             return command.ToString();
@@ -281,6 +285,6 @@ namespace UTN.Winform.SQLToolBox.Layeres.BLL
             command.AppendFormat("\r{0}", "return lista;");
 
             return command.ToString();
-        } 
+        }
     }
 }

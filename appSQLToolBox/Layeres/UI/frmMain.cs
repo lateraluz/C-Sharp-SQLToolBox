@@ -1,15 +1,14 @@
 ﻿using log4net;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using UTN.Winform.SQLToolBox.Layeres.BLL;
 using UTN.Winform.SQLToolBox.Layeres.Entities;
@@ -77,11 +76,14 @@ namespace UTN.Winform.SQLToolBox.Layeres.UI
         }
 
 
+        
+
+
         private void frmMain_Load(object sender, EventArgs e)
         {
             try
             {
-
+                
                 this.trvDataBases.AllowDrop = true;
 
                 _MyLogControlEventos.InfoFormat("Entro a Form Principal");
@@ -94,7 +96,6 @@ namespace UTN.Winform.SQLToolBox.Layeres.UI
             }
             catch (Exception er)
             {
-
                 StringBuilder msg = new StringBuilder();
                 msg.AppendFormat(Utilitarios.CreateGenericErrorExceptionDetail(MethodBase.GetCurrentMethod(), er));
                 _MyLogControlEventos.ErrorFormat("Error {0}", msg.ToString());
@@ -118,6 +119,8 @@ namespace UTN.Winform.SQLToolBox.Layeres.UI
                 ofrmLogin.ShowDialog(this);
                 if (ofrmLogin.DialogResult == DialogResult.OK)
                 {
+                    Cursor.Current = Cursors.WaitCursor;
+
                     List<DataBaseStorage> listaBasesDatos = _BLLDataBase.GetDataBases();
                     // Sort
                     listaBasesDatos = listaBasesDatos.OrderBy(p => p.DataBaseName).ToList();
@@ -159,7 +162,7 @@ namespace UTN.Winform.SQLToolBox.Layeres.UI
                         }
                     }
                 }
-
+                Cursor.Current = Cursors.Default;
                 toolStripStatuslblStatus.Text = "Conectado";
                 _MyLogControlEventos.InfoFormat("Llenó Combo Bases de Datos");
             }
@@ -167,6 +170,7 @@ namespace UTN.Winform.SQLToolBox.Layeres.UI
             {
 
                 StringBuilder msg = new StringBuilder();
+                Cursor.Current = Cursors.Default;
                 msg.AppendFormat(Utilitarios.CreateGenericErrorExceptionDetail(MethodBase.GetCurrentMethod(), er));
                 _MyLogControlEventos.ErrorFormat("Error {0}", msg.ToString());
                 MessageBox.Show("Se ha producido el siguiente error: " + er.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -246,6 +250,7 @@ namespace UTN.Winform.SQLToolBox.Layeres.UI
             {
                 if (this.trvDataBases.SelectedNode.Parent.FullPath != null)
                 {
+                    Cursor.Current = Cursors.WaitCursor;
                     indice = this.toolStripCmbDataBase.FindString(this.trvDataBases.SelectedNode.Parent.Text);
                     this.toolStripCmbDataBase.SelectedIndex = indice;
                     statement = _BLLCRUD.CreateStoredProcedure(this.trvDataBases.SelectedNode.Parent.Text,
@@ -253,11 +258,13 @@ namespace UTN.Winform.SQLToolBox.Layeres.UI
                     this.rtbData.AppendText(statement);
 
                     ColorSQLTextStatements();
+                    Cursor.Current = Cursors.Default;
                 }
             }
             catch (Exception er)
             {
                 StringBuilder msg = new StringBuilder();
+                Cursor.Current = Cursors.Default;
                 msg.AppendFormat(Utilitarios.CreateGenericErrorExceptionDetail(MethodBase.GetCurrentMethod(), er));
                 _MyLogControlEventos.ErrorFormat("Error {0}", msg.ToString());
                 MessageBox.Show("Se ha producido el siguiente error: " + er.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -272,6 +279,10 @@ namespace UTN.Winform.SQLToolBox.Layeres.UI
                                   "command.CommandType = CommandType.Text",
                                   "command.CommandText = sql;",
                                   "string  sql=" };
+            string[] arreglo2 = { "sql ", "@" };
+            string[] arreglo3 = { ",\"\"" };
+            string[] arreglo4 = { "WARNING" };
+
 
             if (string.IsNullOrEmpty(this.rtbData.Text))
             {
@@ -285,9 +296,7 @@ namespace UTN.Winform.SQLToolBox.Layeres.UI
                    ChangeColorWord(item, Color.Black);
                }
              );
-  
-
-            string[] arreglo2 = { "sql ", "@"   };          
+                    
             arreglo2.ToList().ForEach(
               (item) =>
               {
@@ -295,13 +304,21 @@ namespace UTN.Winform.SQLToolBox.Layeres.UI
               }
             );
 
-            string[] arreglo3 = { ",\"\"" };
+           
             arreglo3.ToList().ForEach(
               (item) =>
               {
                   ChangeColorWord(item, Color.Red);
               }
             );
+
+            arreglo4.ToList().ForEach(
+            (item) =>
+            {
+                ChangeColorWord(item, Color.Red);
+            }
+          );
+
 
             // Deseleccionar cualquier cosa
             this.rtbData.Select(0, 0);
@@ -314,6 +331,7 @@ namespace UTN.Winform.SQLToolBox.Layeres.UI
         {
             string[] arreglo1 = { "USE ", "CREATE procedure ", "If ", "As ", "is NOT NULL ", "Drop Proc", "Object_id('", "')" };
             string[] arreglo2 = { "Insert Into ", "VALUES ", "Delete from", "Select ", " from ", "Update ", "SET ", "Where ", " and ", " OR " };
+            string[] arreglo3 = { "WARNING" };
 
             if (string.IsNullOrEmpty(this.rtbData.Text))
             {
@@ -335,6 +353,12 @@ namespace UTN.Winform.SQLToolBox.Layeres.UI
                   }
                 );
 
+            arreglo3.ToList().ForEach(
+                (item) =>
+                {
+                    ChangeColorWord(item, Color.Red);
+                }
+                );
             // Deseleccionar cualquier cosa
             this.rtbData.Select(0, 0);
         }
@@ -364,17 +388,20 @@ namespace UTN.Winform.SQLToolBox.Layeres.UI
             BLLEntities _BLLEntities = new BLLEntities();
             try
             {
+                Cursor.Current = Cursors.WaitCursor;
                 listaEntities = _BLLEntities.CreateEntities(this.trvDataBases.SelectedNode.Text);
 
                 foreach (var item in listaEntities)
                 {
                     this.rtbData.AppendText(item.Detail);
                 }
-
+                Cursor.Current = Cursors.Default;
             }
             catch (Exception er)
             {
+                 
                 StringBuilder msg = new StringBuilder();
+                Cursor.Current = Cursors.Default;
                 msg.AppendFormat(Utilitarios.CreateGenericErrorExceptionDetail(MethodBase.GetCurrentMethod(), er));
                 _MyLogControlEventos.ErrorFormat("Error {0}", msg.ToString());
                 MessageBox.Show("Se ha producido el siguiente error: " + er.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -386,17 +413,19 @@ namespace UTN.Winform.SQLToolBox.Layeres.UI
             BLLCommand _BLLCommand = new BLLCommand();
             try
             {
+                Cursor.Current = Cursors.WaitCursor;
                 string mensaje = _BLLCommand.CrearCommand(this.trvDataBases.SelectedNode.Parent.Text,
                                                             this.trvDataBases.SelectedNode.Text);
                 this.rtbData.AppendText(mensaje);
 
                 ColorADOTextStatements();
 
-
+                Cursor.Current = Cursors.Default;
             }
             catch (Exception er)
             {
                 StringBuilder msg = new StringBuilder();
+                Cursor.Current = Cursors.Default;
                 msg.AppendFormat(Utilitarios.CreateGenericErrorExceptionDetail(MethodBase.GetCurrentMethod(), er));
                 _MyLogControlEventos.ErrorFormat("Error {0}", msg.ToString());
                 MessageBox.Show("Se ha producido el siguiente error: " + er.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
