@@ -21,7 +21,7 @@ If you want to executing just click on appSQLToolBox.exe
 ![1](https://user-images.githubusercontent.com/43474323/64068442-5da48580-cbf5-11e9-86fa-afcc998273f2.JPG)
 
 2. In order to create all Entities, right click on Database then "Crear Entities" <BR>
-![2](https://user-images.githubusercontent.com/43474323/64068545-c50f0500-cbf6-11e9-939b-77c5f7e1e728.JPG)
+![2](https://user-images.githubusercontent.com/43474323/103449451-0e99b500-4c6e-11eb-82a9-e93bfa491901.jpg)
 
 3. All Entities area created within right textbox 
 ![3](https://user-images.githubusercontent.com/43474323/64068552-dce68900-cbf6-11e9-9cc3-e389970a1f16.JPG)
