@@ -33,7 +33,7 @@ If you want to executing just click on appSQLToolBox.exe
 ![5](https://user-images.githubusercontent.com/43474323/64068560-03a4bf80-cbf7-11e9-97f1-e5605d97e1e5.JPG )
 
 
-## License
+ 
 Feel free to improve it!
 
 <BR>
